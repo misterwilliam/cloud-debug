@@ -13,4 +13,7 @@ $ source cloud-debug-venv/bin/activate
 $ git clone https://github.com/misterwilliam/cloud-debug.git
 $ cd cloud-debug
 $ pip install -r requirements.txt
+
+# Run server locally
+$ flask --app server run
 ```
