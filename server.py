@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -10,8 +10,4 @@ def root_handler() -> str:
 
 @app.route("/env")
 def env_handler() -> str:
-  lines = []
-  for key, value in os.environ.items():
-    lines.append(f"{key}={value}")
-  output = "<p>%s</p>" % "<br>".join(lines)
-  return output
+  return render_template("env.html", env_vars=os.environ)
