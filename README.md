@@ -16,4 +16,10 @@ $ pip install -r requirements.txt
 
 # Run server locally
 $ flask --app server run
+
+# Update requirements
+$ pip freeze > requirements.txt
+
+# Run typechecker
+$ mypy server.py
 ```
