@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Request</title>
+</head>
+
+<body>
+
+<h1>Request</h1>
+
+Scheme: {{ scheme }}<br>
+Method: {{ method }}<br>
+
+<h2>Headers</h2>
+<block>
+{% for key, val in headers.items() %}
+  {{ key }}={{ val }}<br>
+{% endfor %}
+</block>
+
+<h2>Cookies</h2>
+<block>
+{% for key, val in cookies.items() %}
+  {{ key }}={{ val }}<br>
+{% endfor %}
+</block>
+
+<h2>Body</h2>
+{{ body }}
+
+</body>
+</html>
